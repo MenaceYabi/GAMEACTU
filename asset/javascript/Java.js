@@ -46,3 +46,6 @@ document.addEventListener('DOMContentLoaded', function(){
 	if(lightbox) lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) closeLightbox(); });
 	document.addEventListener('keyup', (e)=>{ if(e.key === 'Escape') closeLightbox(); });
 });
+
+
+
