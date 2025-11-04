@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GamePortal — Accueil</title>
+  <meta name="description" content="Page d'accueil responsive pour GamePortal">
+  <link rel="stylesheet" href="asset/css/Home.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img src="asset/images/Logo.jpg" alt="logo">
+        <span>GamePortal</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Ouvrir le menu">☰</button>
+      <nav class="nav" aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#games">Jeux</a></li>
+          <li><a href="#gallery">Galerie</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>Plonge dans l'aventure</h1>
+          <p>Retrouve captures, fiches et sélections des meilleurs jeux.</p>
+          <a class="btn" href="#games">Voir les jeux</a>
+        </div>
+        <div class="hero-art">
+          <img src="asset/images/ELden.jpg" alt="Elden Ring">
+        </div>
+      </div>
+    </section>
+
+    <section id="games" class="games container">
+      <h2>Jeux populaires</h2>
+      <div class="games-grid">
+        <article class="game-card">
+          <img src="asset/images/ACVALHALLA.jpg" alt="AC Valhalla">
+          <h3>Assassin's Creed Valhalla</h3>
+        </article>
+        <article class="game-card">
+          <img src="asset/images/Battlefield6.jpg" alt="Battlefield">
+          <h3>Battlefield</h3>
+        </article>
+        <article class="game-card">
+          <img src="asset/images/Uncharted4.jpg" alt="Uncharted 4">
+          <h3>Uncharted 4</h3>
+        </article>
+        <article class="game-card">
+          <img src="asset/images/TLOU.jpg" alt="The Last of Us">
+          <h3>The Last of Us</h3>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery container">
+      <h2>Galerie</h2>
+      <p class="muted">Cliquez pour agrandir</p>
+      <div class="gallery-grid">
+        <img src="asset/images/Brawhlla.jpg" alt="Brawlhalla" data-full="asset/images/Brawhlla.jpg">
+        <img src="asset/images/COD.jpg" alt="Call of Duty" data-full="asset/images/COD.jpg">
+        <img src="asset/images/DBZ.jpg" alt="DBZ" data-full="asset/images/DBZ.jpg">
+        <img src="asset/images/Dishonored.jpg" alt="Dishonored" data-full="asset/images/Dishonored.jpg">
+        <img src="asset/images/RACHET.jpg" alt="Ratchet" data-full="asset/images/RACHET.jpg">
+        <img src="asset/images/StreetFighrer6.jpg" alt="Street Fighter 6" data-full="asset/images/StreetFighrer6.jpg">
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <form class="contact-form" action="#" onsubmit="return false;">
+        <label for="name">Nom</label>
+        <input id="name" type="text" placeholder="Votre nom">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="email@exemple.com">
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Votre message"></textarea>
+        <button class="btn" type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> GamePortal</p>
+      <p class="muted">Images à titre d'exemple</p>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" aria-label="Fermer">✕</button>
+      <img src="" alt="">
+      <p class="caption"></p>
+    </div>
+  </div>
+
+  <script src="asset/javascript/home.js"></script>
+</body>
+</html>
