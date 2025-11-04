@@ -1,0 +1,254 @@
+/* Jeux.css - Styles pour la page des jeux phares */
+
+/* Hero section */
+.hero-game {
+    background: linear-gradient(to bottom, var(--bg), var(--card));
+    padding: 4rem 0 2rem;
+    text-align: center;
+}
+
+.hero-game h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--accent), #ff8f9e);
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+/* Game carousel */
+.featured-games {
+    padding: 2rem 0;
+}
+
+.game-carousel {
+    position: relative;
+    margin: 2rem auto;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.game-slides {
+    position: relative;
+    height: min-content;
+}
+
+.game-slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.game-slide.active {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    opacity: 1;
+}
+
+.game-media {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+
+.game-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-trailer {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.play-trailer:hover {
+    transform: scale(1.05);
+}
+
+.game-info {
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+}
+
+.game-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.game-info h2 {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+}
+
+.game-genre {
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+.game-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.game-rating {
+    background: rgba(255,255,255,0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+}
+
+.game-release {
+    color: var(--muted);
+}
+
+.game-desc {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.game-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.game-features span {
+    background: rgba(255,255,255,0.05);
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+/* Carousel navigation */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.prev-slide,
+.next-slide {
+    background: transparent;
+    border: 2px solid var(--muted);
+    color: var(--muted);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.prev-slide:hover,
+.next-slide:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.slide-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--muted);
+    cursor: pointer;
+    border: none;
+    padding: 0;
+}
+
+.dot.active {
+    background: var(--accent);
+}
+
+/* Trailer modal */
+.trailer-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.trailer-modal[aria-hidden="false"] {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.close-modal {
+    position: absolute;
+    right: -1rem;
+    top: -2.5rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .game-slide.active {
+        grid-template-columns: 1.2fr 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .game-media {
+        aspect-ratio: 16/10;
+    }
+    
+    .play-trailer {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}

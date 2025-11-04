@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeux Phares du Mois - GamePortal</title>
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="asset/css/jeux.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="Index.html">
+                <img src="asset/images/Logo.jpg" alt="GamePortal">
+                <span>GamePortal</span>
+            </a>
+            <button class="menu-toggle" aria-expanded="false" aria-label="Ouvrir le menu">☰</button>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="Index.html">Accueil</a></li>
+                    <li><a href="Jeux.html" class="active">Jeux</a></li>
+                    <li><a href="#gallery">Galerie</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-game">
+            <div class="container">
+                <h1>Jeux Phares du Mois</h1>
+                <p class="subtitle">Découvrez les sorties majeures et leurs trailers</p>
+            </div>
+        </section>
+
+        <section class="featured-games">
+            <div class="container">
+                <div class="game-carousel">
+                    <div class="game-slides">
+                        <!-- Assassin's Creed Valhalla -->
+                        <article class="game-slide active">
+                            <div class="game-media">
+                                <img src="asset/images/ACVALHALLA.jpg" alt="Assassin's Creed Valhalla">
+                                <button class="play-trailer" data-trailer="https://www.youtube.com/embed/ssrNcwxALS4">
+                                    Voir le trailer ▶
+                                </button>
+                            </div>
+                            <div class="game-info">
+                                <span class="game-badge">Nouveau</span>
+                                <h2>Assassin's Creed Valhalla</h2>
+                                <p class="game-genre">Action / RPG Viking</p>
+                                <div class="game-meta">
+                                    <span class="game-rating">9.2/10</span>
+                                    <span class="game-release">Disponible maintenant</span>
+                                </div>
+                                <p class="game-desc">
+                                    Devenez Eivor, un.e raids viking légendaire et bâtissez un nouvel avenir pour votre clan. 
+                                    Explorez un monde ouvert dynamique situé dans l'Angleterre des âges sombres.
+                                </p>
+                                <div class="game-features">
+                                    <span>Combat épique</span>
+                                    <span>Monde ouvert</span>
+                                    <span>Mythologie norse</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Street Fighter 6 -->
+                        <article class="game-slide">
+                            <div class="game-media">
+                                <img src="asset/images/StreetFighrer6.jpg" alt="Street Fighter 6">
+                                <button class="play-trailer" data-trailer="https://www.youtube.com/embed/OJaK09-lM5Y">
+                                    Voir le trailer ▶
+                                </button>
+                            </div>
+                            <div class="game-info">
+                                <span class="game-badge">Top Ventes</span>
+                                <h2>Street Fighter 6</h2>
+                                <p class="game-genre">Combat / Versus Fighting</p>
+                                <div class="game-meta">
+                                    <span class="game-rating">9.5/10</span>
+                                    <span class="game-release">Disponible maintenant</span>
+                                </div>
+                                <p class="game-desc">
+                                    Le légendaire jeu de combat revient avec un nouveau moteur graphique 
+                                    et un système de combat révolutionnaire. Plus accessible aux nouveaux joueurs.
+                                </p>
+                                <div class="game-features">
+                                    <span>Combat technique</span>
+                                    <span>Mode World Tour</span>
+                                    <span>eSport Ready</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Dragon Ball Z -->
+                        <article class="game-slide">
+                            <div class="game-media">
+                                <img src="asset/images/DBZ.jpg" alt="Dragon Ball Z">
+                                <button class="play-trailer" data-trailer="https://www.youtube.com/embed/kYkO8L-hKyw">
+                                    Voir le trailer ▶
+                                </button>
+                            </div>
+                            <div class="game-info">
+                                <span class="game-badge">Tendance</span>
+                                <h2>Dragon Ball Z</h2>
+                                <p class="game-genre">Combat / Anime</p>
+                                <div class="game-meta">
+                                    <span class="game-rating">8.9/10</span>
+                                    <span class="game-release">Disponible maintenant</span>
+                                </div>
+                                <p class="game-desc">
+                                    Revivez les combats légendaires de la série avec des graphismes époustouflants.
+                                    Mode histoire complet et versus explosif en ligne.
+                                </p>
+                                <div class="game-features">
+                                    <span>Combats aériens</span>
+                                    <span>Mode Histoire</span>
+                                    <span>Online VS</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="carousel-nav">
+                        <button class="prev-slide" aria-label="Jeu précédent">←</button>
+                        <div class="slide-dots"></div>
+                        <button class="next-slide" aria-label="Jeu suivant">→</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Trailer -->
+    <div class="trailer-modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Fermer">✕</button>
+            <div class="video-container">
+                <iframe width="560" height="315" src="" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> GamePortal — Tous droits réservés</p>
+            <p class="muted">Trailers fournis par YouTube</p>
+        </div>
+    </footer>
+
+    <script src="asset/javascript/jeux.js"></script>
+</body>
+</html>

@@ -6,6 +6,7 @@
   <title>GamePortal — Jeux vidéo</title>
   <meta name="description" content="Site vitrine responsive pour jeux vidéo avec galerie et fiches jeux.">
   <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/featured.css">
 </head>
 <body>
   <header class="site-header">
@@ -18,7 +19,7 @@
       <nav class="nav">
         <ul class="nav-links">
           <li><a href="#home">Accueil</a></li>
-          <li><a href="#games">Jeux</a></li>
+          <li><a href="Jeux.html">Jeux</a></li>
           <li><a href="#gallery">Galerie</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -40,31 +41,92 @@
       </div>
     </section>
 
+    <section id="featured" class="featured container">
+      <h2>Jeux phares du mois</h2>
+      <div class="featured-slider">
+        <div class="featured-track">
+          <article class="featured-card">
+            <div class="featured-image">
+              <img src="asset/images/ACVALHALLA.jpg" alt="Assassin's Creed Valhalla">
+              <span class="featured-badge">Nouveau</span>
+            </div>
+            <div class="featured-content">
+              <h3>Assassin's Creed Valhalla</h3>
+              <p class="featured-genre">Action / Aventure</p>
+              <p class="featured-desc">Explore la Norvège et l'Angleterre dans cette épopée viking. Combat, exploration et mythologie nordique.</p>
+              <div class="featured-meta">
+                <span class="featured-rating">9.2/10</span>
+                <a href="#" class="btn-small">En savoir plus</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card">
+            <div class="featured-image">
+              <img src="asset/images/Battlefield6.jpg" alt="Battlefield">
+              <span class="featured-badge">Tendance</span>
+            </div>
+            <div class="featured-content">
+              <h3>Battlefield 2042</h3>
+              <p class="featured-genre">FPS / Action</p>
+              <p class="featured-desc">Plongez dans des batailles épiques à 128 joueurs. Véhicules, destruction dynamique et événements climatiques.</p>
+              <div class="featured-meta">
+                <span class="featured-rating">8.8/10</span>
+                <a href="#" class="btn-small">En savoir plus</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card">
+            <div class="featured-image">
+              <img src="asset/images/StreetFighrer6.jpg" alt="Street Fighter 6">
+              <span class="featured-badge">Top ventes</span>
+            </div>
+            <div class="featured-content">
+              <h3>Street Fighter 6</h3>
+              <p class="featured-genre">Combat</p>
+              <p class="featured-desc">Le légendaire jeu de combat revient avec des graphismes next-gen et un nouveau système de combat dynamique.</p>
+              <div class="featured-meta">
+                <span class="featured-rating">9.5/10</span>
+                <a href="#" class="btn-small">En savoir plus</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        
+        <div class="featured-nav">
+          <button class="featured-prev" aria-label="Jeu précédent">←</button>
+          <div class="featured-dots"></div>
+          <button class="featured-next" aria-label="Jeu suivant">→</button>
+        </div>
+      </div>
+    </section>
+
     <section id="games" class="games container">
-      <h2>Nos jeux populaires</h2>
+      <h2>Tous nos jeux</h2>
       <div class="games-grid">
-        <article class="game-card">
-          <img src="asset/images/ACVALHALLA.jpg" alt="Assassin's Creed Valhalla">
-          <h3>Assassin's Creed Valhalla</h3>
-          <p>Action / Aventure — Explore la Norvège et l'Angleterre.</p>
-        </article>
-
-        <article class="game-card">
-          <img src="asset/images/Battlefield6.jpg" alt="Battlefield">
-          <h3>Battlefield</h3>
-          <p>FPS multijoueur — Batailles à grande échelle.</p>
-        </article>
-
         <article class="game-card">
           <img src="asset/images/Uncharted4.jpg" alt="Uncharted 4">
           <h3>Uncharted 4</h3>
-          <p>Plateforme / aventure — Histoire et exploration.</p>
+          <p>Aventure épique — Histoire et exploration.</p>
         </article>
 
         <article class="game-card">
           <img src="asset/images/TLOU.jpg" alt="The Last of Us">
           <h3>The Last of Us</h3>
           <p>Survie narrative — Émotion et tension.</p>
+        </article>
+
+        <article class="game-card">
+          <img src="asset/images/DBZ.jpg" alt="Dragon Ball Z">
+          <h3>Dragon Ball Z</h3>
+          <p>Combat — Saga légendaire.</p>
+        </article>
+
+        <article class="game-card">
+          <img src="asset/images/RACHET.jpg" alt="Ratchet & Clank">
+          <h3>Ratchet & Clank</h3>
+          <p>Plateforme — Action colorée.</p>
         </article>
       </div>
     </section>
